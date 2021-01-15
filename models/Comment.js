@@ -12,13 +12,13 @@ Comment.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
-            validate: {
-                len: [1, 400]
-            }
         },
         comment_text: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                len: [1, 400]
+            }
         },
         user_id: {
             type: DataTypes.INTEGER,
